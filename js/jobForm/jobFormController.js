@@ -87,8 +87,28 @@ app.controller('jobFormController', function($scope, $location, jobFormService, 
         }
     }
     
+    $scope.activities = [{id: 'activity1'}, {id: 'activity2'}];
+  
+    $scope.addNewActivity = function() {
+        var newItemNo = $scope.activities.length+1;
+        $scope.activities.push({'id':'activity'+newItemNo});
+    };
     
+    $scope.removeActivity = function(index) {   
+        $scope.activities.splice(index, 1);
+    };
 
+    $scope.materials = [{id: 'materials1'}, {id: 'materials2'}];
+  
+    $scope.addNewMaterials = function() {
+        var newItemNo = $scope.materials.length+1;
+        $scope.materials.push({'id':'materials'+newItemNo});
+    };
+    
+    $scope.removeMaterials = function(index) {   
+        $scope.materials.splice(index, 1);
+    };
+    
     
     $scope.today = function() {
         $scope.dt = new Date();

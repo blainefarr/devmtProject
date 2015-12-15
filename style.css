@@ -15,8 +15,7 @@ body {
     min-width: 280px;
     max-width: 700px;
     margin: auto;
-    border-radius: 6px;
-    
+    border-radius: 6px;  
 }
 
 .formsHolder {
@@ -120,4 +119,19 @@ body {
 
 .buttonHolder {
     text-align: center;
+}
+
+.activityFields {
+    display: flex;   
+}
+
+.hoursInput {
+    flex: 2
+}
+
+.activityInput {
+    flex: 3
+}
+.personInput {
+    flex: 2
 }

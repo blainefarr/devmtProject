@@ -32,6 +32,7 @@
                         </div>
                     </div>
         -->
+<!--
                 <div class="form-group">
                     <label for="sel1">Type of Job</label><br>
                         <select class="form-control" ng-model="jobType">
@@ -39,31 +40,36 @@
                           <option value="Bid">Bid</option>
                         </select>
                 </div>
+-->
 
                     <label for="exampleInputPassword1">Date</label>
                     <input type="date" ng-model="dt" class="form-control" id="exampleInputPassword1" placeholder="Date">
                 </div>
-
+                
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Name</label>
-        <!--            <p class="help-block">Example block-level help text here.</p>-->
-                    <input type="text" ng-model="empName" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                    <label for="exampleInputPassword1">Client / location</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Client / location">
                 </div>
 
                 <div class="form-group">
                     <label for="exampleInputPassword1">Job Name</label>
-                    <input type="text" ng-model="jobName" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                    <input type="text" ng-model="jobName" class="form-control" id="exampleInputPassword1" placeholder="Job name">
                 </div>
+                
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Person Responsible</label>
+        <!--            <p class="help-block">Example block-level help text here.</p>-->
+                    <input type="text" ng-model="empName" class="form-control" id="exampleInputPassword1" placeholder="Person responsible">
+                </div>
+
+                
         <!--
                 <div class="form-group">
                     <label for="exampleInputPassword1">Additional Workers</label>
                     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
                 </div>
         -->
-                <div class="form-group">
-                    <label for="exampleInputPassword1">FM Group</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
-                </div>
+                
         <!--
                 <div class="form-group">
                     <label for="exampleInputPassword1">PO</label>
@@ -76,11 +82,27 @@
         -->
                 <div class="form-group">
                     <label for="exampleInputPassword1">Job description</label>
-                    <textarea type="text" class="form-control" rows="4" id="exampleInputPassword1" placeholder="Name"></textarea>
+                    <textarea type="text" class="form-control" rows="3" id="exampleInputPassword1" placeholder="Job description"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Hours worked</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                    <label for="exampleInputPassword1">Labor</label>
+                    <div class="activityFields" data-ng-repeat="activity in activities">
+                        <input type="text" class="form-control activityFields personInput" id="exampleInputPassword1" placeholder="Person">
+                        <input type="text" class="form-control activityFields activityInput" id="exampleInputPassword1" placeholder="Activty">
+                        <input type="number" class="form-control activityFields hoursInput" id="exampleInputPassword1" placeholder="Hrs">
+                        <button class="remove" ng-click="removeActivity($index)">-</button>
+                    </div>
+                    <button class="addFields btn btn-default" ng-click="addNewActivity()">Add Activity</button>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Materials</label>
+                    <div class="activityFields" data-ng-repeat="material in materials">
+                        <input type="text" class="form-control activityFields personInput" id="exampleInputPassword1" placeholder="Person">
+                        <input type="text" class="form-control activityFields activityInput" id="exampleInputPassword1" placeholder="Activty">
+                        <input type="number" class="form-control activityFields hoursInput" id="exampleInputPassword1" placeholder="Hrs">
+                        <button class="remove" ng-click="removeMaterials($index)">-</button>
+                    </div>
+                    <button class="addFields btn btn-default" ng-click="addNewMaterials()">Add Materials</button>
                 </div>
         <!--
                 <div class="form-group">

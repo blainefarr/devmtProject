@@ -52,6 +52,25 @@
                             </tr>
                         </tbody>
                     </table>
+                    <h2>Bid</h2>
+                    <table class="table table-hover contentBody">
+                        <thead>
+                            <tr>
+                                <th>Job</th>
+                                <th>Project</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="job in jobs | filter: {jobStatus: 'Submitted'}" ng-click="editSelected();">
+                                <td>1</td>
+                                <td>{{job.jobName}}</td>
+                                <td>{{job.jobDate  | date : "MM/dd/yy" }}</td>
+                                <td>Status</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>  
             </div>
         </div>
