@@ -1,0 +1,123 @@
+body {
+    width: 100%;
+    margin: auto;
+    background-color: rgb(52, 102, 147);
+    
+}
+.logoText {
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.formHolder {
+    background-color: rgb(237, 237, 237);
+    min-width: 280px;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 6px;
+    
+}
+
+.formsHolder {
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+
+.loginFormBody {
+    background-color: rgb(237, 237, 237);
+    max-width: 420px;
+    margin: auto;
+    padding-top: 1rem;
+    border-radius: 6px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+}
+
+.nameFields {
+    display: flex;   
+}
+
+.nameField {
+    
+}
+
+.registerField {
+    margin-bottom: 10px;   
+}
+
+.centerText {
+    text-align: center;   
+}
+
+.loginForm {
+    max-width: 280px;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.loginButton {
+    width: 100%;
+    height: 30px;
+    color: white;
+    background-color: rgb(60, 117, 157);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.bottomCallout {
+    background-color: rgb(226, 226, 226);   
+    height: 35px;
+    text-align: center;
+    font-size: 13px;
+    color: rgb(82, 144, 179);
+    vertical-align: middle;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    margin-left: -10px;
+    margin-right: -10px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.smallText {
+    margin-top: 8px;
+    color: rgb(82, 144, 179);
+    font-size: 11px;
+    text-align: right;
+}
+
+.formHeader {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 2rem;
+    
+}
+
+.jobHeader {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.contentBody {
+    padding-left: 3rem;   
+    padding-right: 3rem;
+}
+
+.companyLogo {
+    text-align: center   
+}
+
+.actionHolder {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.buttonHolder {
+    text-align: center;
+}

@@ -1,0 +1,106 @@
+<div class="row">
+    <div class="formHolder">    
+        <div class="formHeader">
+            <h2 class="companyLogo">Company XYZ</h2>
+        </div>
+        <div class="actionHolder">
+            <div class="buttonHolder">
+                <a href="/#/home" class="btn btn-primary">Return to Jobs</a>
+            </div>
+        </div>
+
+
+        <div ng-controller="jobFormController">
+            <div class="jobHeader">
+                <h2>Create New Job</h2>
+            </div>    
+            <form class="contentBody">
+                <div class="form-group">
+
+
+        <!--            What is <input for for? and what is the id for?-->
+        <!--
+                    <label for="exampleInputEmail1">Date</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="input-group">
+                              <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                              <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                              </span>
+                            </p>
+                        </div>
+                    </div>
+        -->
+                <div class="form-group">
+                    <label for="sel1">Type of Job</label><br>
+                        <select class="form-control" ng-model="jobType">
+                          <option value="Project">Project</option>
+                          <option value="Bid">Bid</option>
+                        </select>
+                </div>
+
+                    <label for="exampleInputPassword1">Date</label>
+                    <input type="date" ng-model="dt" class="form-control" id="exampleInputPassword1" placeholder="Date">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Name</label>
+        <!--            <p class="help-block">Example block-level help text here.</p>-->
+                    <input type="text" ng-model="empName" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Job Name</label>
+                    <input type="text" ng-model="jobName" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                </div>
+        <!--
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Additional Workers</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                </div>
+        -->
+                <div class="form-group">
+                    <label for="exampleInputPassword1">FM Group</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                </div>
+        <!--
+                <div class="form-group">
+                    <label for="exampleInputPassword1">PO</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Worked requested by</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                </div>
+        -->
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Job description</label>
+                    <textarea type="text" class="form-control" rows="4" id="exampleInputPassword1" placeholder="Name"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Hours worked</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                </div>
+        <!--
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Billable hours</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                </div>
+                    <div class="form-group">
+                    <label for="exampleInputPassword1">Supplier</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Item purchased or used</label>
+                    <textarea type="text" class="form-control" rows="4" id="exampleInputPassword1" placeholder="Name"></textarea>
+                </div>
+        -->
+
+                <button type="submit" ng-click="submitJob()" class="btn btn-default">Submit Now</button>
+                <button type="submit" ng-click="saveJob()" class="btn btn-default">Submit Later</button>
+            </form>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="jobsApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Contractor App</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+<body>
+    <h2 class="logoText">Job Reporting App</h2>
+    
+        
+    <div ui-view></div>
+    
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+
+        <!-- Firebase -->
+        <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+        <!-- AngularFire -->
+
+        <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+        <script src="app.js"></script>
+        <script src="js/jobForm/jobFormController.js"></script>
+        <script src="js/jobForm/jobFormService.js"></script>
+        <script src="js/homePage/mainController.js"></script>
+        <script src="js/auth/authController.js"></script>
+        <script src="js/auth/authService.js"></script>
+        
+        <script src="js/auth/userService.js"></script>
+        <script src="js/createTeam/createTeamController.js"></script>
+        <script src="js/createTeam/createTeamService.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="formsHolder">
+        <div class="formHolder">    
+            <div class="formHeader">
+                            <h2 class="companyLogo">Company XYZ</h2>
+            </div>
+            <div class="actionHolder">
+                <div class="buttonHolder">
+                    <a href="#/create" class="btn btn-primary">Create New Job</a>
+                </div>
+            </div>
+
+            <div ng-controller="mainController">
+                <div>Welcome {{user.firstName}}! <button ng-click="logout()">Logout</button></div>
+                <div class="contentBody">
+
+                    <h2>In Progress</h2>
+                    <table class="table table-hover contentBody">
+                        <thead>
+                            <tr>
+                                <th>Job</th>
+                                <th>Project</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="job in jobs | filter: {jobStatus: 'Saved'}">
+                                <td>1</a></td>
+                                <td>{{job.jobName}}</td>
+                                <td>{{job.jobDate  | date : "MM/dd/yy" }}</td>
+                                <td><a ui-sref="edit({ jobID: job.$id })">Edit</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2>Submitted</h2>
+                    <table class="table table-hover contentBody">
+                        <thead>
+                            <tr>
+                                <th>Job</th>
+                                <th>Project</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="job in jobs | filter: {jobStatus: 'Submitted'}" ng-click="editSelected();">
+                                <td>1</td>
+                                <td>{{job.jobName}}</td>
+                                <td>{{job.jobDate  | date : "MM/dd/yy" }}</td>
+                                <td>Status</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
